@@ -28,7 +28,7 @@ Danny has shared with you 3 key datasets for this case study:
 
 You can inspect the entity relationship diagram and example data below.
 
-![Tables Relationships](https://github.com/linhares-luis/Data-Study/blob/8-weeks-SQL-challenge/Case Study #1/relationship.png?raw=true)
+<img src="relationship.png" alt="tables relationship" width="400"/>
 
 ### QUESTIONS
 - 1 - What is the total amount each customer spent at the restaurant?
