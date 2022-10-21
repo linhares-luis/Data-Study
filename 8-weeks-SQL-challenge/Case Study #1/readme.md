@@ -4,9 +4,9 @@
    -- 21/10/2022
    -- MS SQL server
    --------------------
-   https://8weeksqlchallenge.com/case-study-1/
-    /*	QUESTIONS	*/
--- 1. What is the total amount each customer spent at the restaurant?
+   https://8weeksqlchallenge.com/case-study-1/ <br>
+   ## QUESTIONS
+- 1. What is the total amount each customer spent at the restaurant?
 -- 2. How many days has each customer visited the restaurant?
 -- 3. What was the first item from the menu purchased by each customer?
 -- 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
