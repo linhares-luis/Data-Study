@@ -1,8 +1,8 @@
---------------------
-   Case Study #1
-   -- Luís Linhares
-   -- 21/10/2022
-   -- MS SQL server
+  --------------------
+   ## Case Study #1
+    Luís Linhares
+    21/10/2022
+    MS SQL server
    --------------------
    https://8weeksqlchallenge.com/case-study-1/ <br>
    ## QUESTIONS
