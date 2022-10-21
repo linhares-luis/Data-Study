@@ -1,6 +1,6 @@
 /* --------------------
    Case Study #1
-   -- Luís Linhares
+   -- LuÃ­s Linhares
    -- 21/10/2022
    -- MS SQL server
    --------------------*/
