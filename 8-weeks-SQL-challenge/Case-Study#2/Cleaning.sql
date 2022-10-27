@@ -14,15 +14,15 @@ SELECT * FROM pizza_recipes;
 SELECT* FROM runner_orders;
 --- cleaning all null values 
 UPDATE runner_orders 
-SET pickup_time = null, 
-	distance = 0,
-	duration = 0
+SET pickup_time = NULL, 
+	distance = NULL,
+	duration = NULL
 	WHERE cancellation LIKE '%cancel%'
 UPDATE runner_orders 
 SET cancellation = NULL WHERE cancellation IN ('',' ','null');
-UPDATE customer_orders SET exclusions=0  WHERE exclusions in  ('',' ','null');
-UPDATE customer_orders SET extras=0  WHERE extras in  ('',' ','null');
-select * from runner_orders
+UPDATE customer_orders SET exclusions=NULL  WHERE exclusions in  ('',' ','null','0');
+UPDATE customer_orders SET extras=NULL  WHERE extras in  ('',' ','null','0');
+select * from customer_orders
 
 -- 2. Runnner orders Distance and duration
 /*solution 1*/

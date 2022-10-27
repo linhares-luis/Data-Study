@@ -12,10 +12,12 @@ A. Pizza Metrics
 10. What was the volume of orders for each day of the week?
 */
 
+USE pizza_runner
+GO
 -- 1. How many pizzas were ordered?
 -- The customer_order table has 1 row to each pizza, to find how many pizzas where ordered we just need to count the number of rows
 SELECT COUNT(*) nb_pizzas FROM customer_orders /*14*/
-
+GO
 -- 2. How many unique customer orders were made?
 -- Let's consider a unique customer order the combination of (pizza, extras and exclusions)
 SELECT COUNT(*) AS unique_orders
@@ -56,3 +58,44 @@ GROUP BY c.order_id
 ORDER BY COUNT(c.order_id) DESC
 
 -- 7. For each customer, how many delivered pizzas had at least 1 change and how many had no changes?
+WITH delivered_order (customer_id, order_id, extras, exclusions, changed) AS (
+SELECT c.customer_id, c.order_id, c.extras, c.exclusions, 
+changed = CASE
+	WHEN c.extras IS NOT NULL THEN 1
+	WHEN c.exclusions IS NOT NULL THEN 1
+	ELSE 0
+	END
+FROM customer_orders c 
+	JOIN runner_orders r
+	ON c.order_id = r.order_id 
+WHERE cancellation IS NULL
+)
+SELECT customer_id, SUM(changed) pizz_w_change
+FROM delivered_order
+GROUP BY customer_id;
+go
+-- 8. How many pizzas were delivered that had both exclusions and extras?
+WITH delivered_order (customer_id, order_id, extras, exclusions, changed) AS (
+SELECT c.customer_id, c.order_id, c.extras, c.exclusions, 
+changed = CASE
+	WHEN (c.extras IS NOT NULL) and (c.exclusions IS NOT NULL) THEN 1
+	ELSE 0
+	END
+FROM customer_orders c 
+	JOIN runner_orders r
+	ON c.order_id = r.order_id 
+WHERE cancellation IS NULL
+)
+SELECT SUM(changed) pizz_both_change
+FROM delivered_order
+
+-- 9. What was the total volume of pizzas ordered for each hour of the day?
+SELECT DATENAME(hour, order_time) hour_day, COUNT(*) amt_pizzas 
+FROM customer_orders
+GROUP BY DATENAME(hour, order_time)
+
+-- 10. What was the volume of orders for each day of the week?
+SELECT DATENAME(WEEKDAY, order_time) week_day, COUNT(*) amt_pizzas 
+FROM customer_orders
+GROUP BY DATENAME(WEEKDAY, order_time)
+order by 
