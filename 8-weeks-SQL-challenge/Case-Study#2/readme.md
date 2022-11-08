@@ -46,5 +46,5 @@ You can inspect the entity relationship diagram and example data below.
   9. What was the total volume of pizzas ordered for each hour of the day?
   10. What was the volume of orders for each day of the week? 
 
-  [PROPOSED_SOLUTION](https://github.com/linhares-luis/Data-Study/blob/main/8-weeks-SQL-challenge/Case-Study%232/A_PizzaMetrics.sql)
+  [PROPOSED_SOLUTION_SQL](SQL/A_PizzaMetrics.sql)
 </details>
