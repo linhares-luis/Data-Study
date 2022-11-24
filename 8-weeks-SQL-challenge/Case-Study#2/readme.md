@@ -48,4 +48,5 @@ You can inspect the entity relationship diagram and example data below.
 </details>
 
   [SOLUTION](A_Pizza_Metric.md)  
-  [PROPOSED_SOLUTION_SQL](SQL/A_PizzaMetrics.sql)
+  [PROPOSED_SOLUTION_SQL](SQL/A_PizzaMetrics.sql)<br>
+  Tableau [Link](https://public.tableau.com/views/pizzarunner/PizzaMetrics?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
