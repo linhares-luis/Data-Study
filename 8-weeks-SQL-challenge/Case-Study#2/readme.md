@@ -50,3 +50,16 @@ You can inspect the entity relationship diagram and example data below.
   [SOLUTION](A_Pizza_Metric.md)  
   [PROPOSED_SOLUTION_SQL](SQL/A_PizzaMetrics.sql)<br>
   Tableau [Link](https://public.tableau.com/views/pizzarunner/PizzaMetrics?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+<details>
+  <summary>B. Runner and Customer Experience </summary>
+
+  ### Questions
+  1. How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)
+  2. What was the average time in minutes it took for each runner to arrive at the Pizza Runner HQ to pickup the order?
+  3. Is there any relationship between the number of pizzas and how long the order takes to prepare?
+  4. What was the average distance travelled for each customer?
+  5. What was the difference between the longest and shortest delivery times for all orders?
+  6. What was the average speed for each runner for each delivery and do you notice any trend for these values?
+  7. What is the successful delivery percentage for each runner?
+</details>
+[PROPOSED_SOLUTION](https://github.com/linhares-luis/Data-Study/blob/31962afc39ad942b6137bea36a02b3c8b32b91d1/8-weeks-SQL-challenge/Case-Study%232/B_Runner.md)
