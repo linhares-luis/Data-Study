@@ -62,4 +62,5 @@ You can inspect the entity relationship diagram and example data below.
   6. What was the average speed for each runner for each delivery and do you notice any trend for these values?
   7. What is the successful delivery percentage for each runner?
 </details>
+
 [PROPOSED_SOLUTION](https://github.com/linhares-luis/Data-Study/blob/31962afc39ad942b6137bea36a02b3c8b32b91d1/8-weeks-SQL-challenge/Case-Study%232/B_Runner.md)
